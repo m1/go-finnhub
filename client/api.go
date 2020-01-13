@@ -80,7 +80,6 @@ func (a *API) Call(method string, path string, params finnhub.URLParams, respons
 		return err
 	}
 	req.URL.RawQuery = q.Encode()
-	println(req.URL.String())
 	resp, err := a.Client.Do(req)
 	if err != nil {
 		return err
