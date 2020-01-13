@@ -40,11 +40,9 @@ func (c *Company) UnmarshalJSON(data []byte) error {
 	if err = json.Unmarshal(data, &company); err != nil {
 		return err
 	}
-	if company.WebURL != "" {
-		c.WebURL, err = url.Parse(company.WebURL)
-		if err != nil {
-			return err
-		}
+	c.WebURL, err = url.Parse(company.WebURL)
+	if err != nil {
+		return err
 	}
 	return err
 }

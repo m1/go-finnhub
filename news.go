@@ -35,18 +35,14 @@ func (n *News) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	n.DateTime = time.Unix(news.DateTime, 0)
-	if news.Image != "" {
 		n.Image, err = url.Parse(news.Image)
 
 		if err != nil {
 			return err
 		}
-	}
-	if news.URL != "" {
 		n.URL, err = url.Parse(news.URL)
 		if err != nil {
 			return err
 		}
-	}
 	return nil
 }
