@@ -16,34 +16,34 @@ __Simple and easy to use client for stock, forex and crpyto data from [finnhub.i
 
 Follow this basic example, for more in-depth documentation see the [docs](https://godoc.org/github.com/m1/go-finnhub):
 ```go
-finnhub := client.New("bn2iiinrh5rdsulinog0")
+c := client.New("bn2iiinrh5rdsulinog0")
 
 // Stocks
-company, err := finnhub.Stock.GetProfile("AAPL")
-ceo, err := finnhub.Stock.GetCEO("AAPL")
-recommendation, err := finnhub.Stock.GetRecommendations("AAPL")
-target, err := finnhub.Stock.GetPriceTarget("AAPL")
-options, err := finnhub.Stock.GetOptionChain("DBD")
-peers, err := finnhub.Stock.GetPeers("AAPL")
-earnings, err := finnhub.Stock.GetEarnings("AAPL")
-candle, err := finnhub.Stock.GetCandle("AAPL", finnhub2.CandleResolutionDay, nil)
-exchanges, err := finnhub.Stock.GetExchanges()
-symbols, err := finnhub.Stock.GetSymbols("dddadsad")
-gradings, err := finnhub.Stock.GetGradings(&finnhub2.GradingParams{Symbol: "hello"})
+company, err := c.Stock.GetProfile("AAPL")
+ceo, err := c.Stock.GetCEO("AAPL")
+recommendation, err := c.Stock.GetRecommendations("AAPL")
+target, err := c.Stock.GetPriceTarget("AAPL")
+options, err := c.Stock.GetOptionChain("DBD")
+peers, err := c.Stock.GetPeers("AAPL")
+earnings, err := c.Stock.GetEarnings("AAPL")
+candle, err := c.Stock.GetCandle("AAPL", finnhub.CandleResolutionDay, nil)
+exchanges, err := c.Stock.GetExchanges()
+symbols, err := c.Stock.GetSymbols("dddadsad")
+gradings, err := c.Stock.GetGradings(&finnhub.GradingParams{Symbol: "hello"})
 
 // Crypto
-exchanges, err := finnhub.Crypto.GetExchanges()
-symbols, err := finnhub.Crypto.GetSymbols("Binance")
-candle, err := finnhub.Crypto.GetCandle("BINANCE:BEAMUSDT", finnhub2.CandleResolutionMonth, nil)
+exchanges, err := c.Crypto.GetExchanges()
+symbols, err := c.Crypto.GetSymbols("Binance")
+candle, err := c.Crypto.GetCandle("BINANCE:BEAMUSDT", finnhub.CandleResolutionMonth, nil)
 
 // Forex
-exchanges, err := finnhub.Forex.GetExchanges()
-symbols, err := finnhub.Forex.GetSymbols("oanda")
-candle, err := finnhub.Forex.GetCandle("OANDA:XAU_GBP", finnhub2.CandleResolutionMonth, nil)
+exchanges, err := c.Forex.GetExchanges()
+symbols, err := c.Forex.GetSymbols("oanda")
+candle, err := c.Forex.GetCandle("OANDA:XAU_GBP", finnhub.CandleResolutionMonth, nil)
 
 // News
-news, err := finnhub.News.Get(nil)
-news, err = finnhub.News.Get(&finnhub2.NewsParams{Category: finnhub2.NewsCategoryCrypto})
-news, err = finnhub.News.GetCompany("APPL")
-sentiment, err := finnhub.News.GetSentiment("AAPL ")
+news, err := c.News.Get(nil)
+news, err = c.News.Get(&finnhub.NewsParams{Category: finnhub.NewsCategoryCrypto})
+news, err = c.News.GetCompany("APPL")
+sentiment, err := c.News.GetSentiment("AAPL ")
 ```
