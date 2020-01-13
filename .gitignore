@@ -1,0 +1,6 @@
+vendor
+memprofile.out
+profile.out
+coverage.out
+test_files
+.idea
