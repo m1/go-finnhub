@@ -6,7 +6,7 @@ import (
 
 const (
 	// URLNews news endpoint url
-	URLNews      = "news"
+	URLNews = "news"
 
 	// URLSentiment sentiment endpoint url
 	URLSentiment = "news-sentiment"

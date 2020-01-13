@@ -88,8 +88,8 @@ func TestAPI_Call(t *testing.T) {
 			wantErr: ErrServer,
 		},
 		{
-			name: "invalid method",
-			args: args{method: ",", path: "TestAPI_Call_invalid", params: validParams, response: &MockResponse{}},
+			name:            "invalid method",
+			args:            args{method: ",", path: "TestAPI_Call_invalid", params: validParams, response: &MockResponse{}},
 			wantErrContains: "invalid method",
 		},
 		{

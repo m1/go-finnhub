@@ -7,7 +7,7 @@ import (
 
 const (
 	// CandleStatusOK candle status ok
-	CandleStatusOK     = "ok"
+	CandleStatusOK = "ok"
 
 	// CandleStatusNoData candle has no data
 	CandleStatusNoData = "no_data"

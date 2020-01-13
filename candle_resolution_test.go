@@ -12,7 +12,7 @@ func TestCandleResolution_String(t *testing.T) {
 	}{
 		{
 			name: "valid",
-			d: CandleResolution5Second,
+			d:    CandleResolution5Second,
 			want: "5",
 		},
 	}

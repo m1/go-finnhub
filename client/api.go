@@ -15,18 +15,18 @@ import (
 
 const (
 	// APIEndpoint the api url
-	APIEndpoint  = "https://finnhub.io/api"
+	APIEndpoint = "https://finnhub.io/api"
 
 	// APIVersion the api version
-	APIVersion   = "v1"
+	APIVersion = "v1"
 
 	// UserAgentFmt the user agent for the client
 	UserAgentFmt = "m1/go-finnhub-%v"
-	)
+)
 
 var (
 	// ErrEmptyResponse if the api returns an empty response
-	ErrEmptyResponse   = errors.New("empty response given - you may of entered an incorrect symbol")
+	ErrEmptyResponse = errors.New("empty response given - you may of entered an incorrect symbol")
 
 	// ErrTooManyRequests if the api returns that you have made too many requests
 	ErrTooManyRequests = errors.New("you are over the request limit - you may of not entered a valid token")

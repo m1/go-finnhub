@@ -9,11 +9,11 @@ import (
 
 func TestGrading_UnmarshalJSON(t *testing.T) {
 	gradingData := map[string]interface{}{
-		"symbol": "test",
-		"company": "test",
+		"symbol":    "test",
+		"company":   "test",
 		"fromGrade": "from",
-		"toGrade": "to",
-		"action": "up",
+		"toGrade":   "to",
+		"action":    "up",
 		"gradeTime": 1577836800,
 	}
 

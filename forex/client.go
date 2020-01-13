@@ -12,7 +12,7 @@ const (
 	URLExchange = "forex/exchange"
 
 	// URLSymbol symbol endpoint url
-	URLSymbol   = "forex/symbol"
+	URLSymbol = "forex/symbol"
 
 	// URLCandle candle endpoint url
 	URLCandle = "forex/candle"

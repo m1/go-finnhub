@@ -2,19 +2,19 @@ package finnhub
 
 const (
 	// ParamToken the param for tokens
-	ParamToken      = "token"
+	ParamToken = "token"
 
 	// ParamSymbol the param for symbols
-	ParamSymbol     = "symbol"
+	ParamSymbol = "symbol"
 
 	// ParamCount the param for count
-	ParamCount      = "count"
+	ParamCount = "count"
 
 	// ParamFrom the param for from
-	ParamFrom       = "from"
+	ParamFrom = "from"
 
 	// ParamTo the param for to
-	ParamTo         = "to"
+	ParamTo = "to"
 
 	// ParamResolution the param for resolution
 	ParamResolution = "resolution"

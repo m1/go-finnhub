@@ -114,16 +114,16 @@ func TestClient_GetSymbols(t *testing.T) {
 		wantErr error
 	}{
 		{
-			name: "valid",
+			name:   "valid",
 			fields: fields{API: NewBackendMock()},
-			args: args{exchange:mockExchange1.Name},
-			want: mockExchange1Symbols,
+			args:   args{exchange: mockExchange1.Name},
+			want:   mockExchange1Symbols,
 		},
 		{
-			name: "valid",
+			name:   "valid",
 			fields: fields{API: NewBackendMock()},
-			args: args{exchange:mockExchange2.Name},
-			want: mockExchange2Symbols,
+			args:   args{exchange: mockExchange2.Name},
+			want:   mockExchange2Symbols,
 		},
 	}
 	for _, tt := range tests {

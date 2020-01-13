@@ -4,4 +4,3 @@ package finnhub
 type NewsParams struct {
 	Category string
 }
-

@@ -11,7 +11,7 @@ type News struct {
 	Category string    `json:"category"`
 	DateTime time.Time `json:"dateTime"`
 	Headline string    `json:"headline"`
-	ID       int    `json:"id"`
+	ID       int       `json:"id"`
 	Image    *url.URL  `json:"image"`
 	Related  string    `json:"related"`
 	Source   string    `json:"source"`
