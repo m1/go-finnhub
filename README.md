@@ -14,9 +14,11 @@ __Simple and easy to use client for stock, forex and crpyto data from [finnhub.i
 
 ## Usage
 
+First sign up for your api token here [finnhub.io](https://finnhub.io/)
+
 Follow this basic example, for more in-depth documentation see the [docs](https://godoc.org/github.com/m1/go-finnhub):
 ```go
-c := client.New("bn2iiinrh5rdsulinog0")
+c := client.New("your_token_here")
 
 // Stocks
 company, err := c.Stock.GetProfile("AAPL")
@@ -28,8 +30,8 @@ peers, err := c.Stock.GetPeers("AAPL")
 earnings, err := c.Stock.GetEarnings("AAPL")
 candle, err := c.Stock.GetCandle("AAPL", finnhub.CandleResolutionDay, nil)
 exchanges, err := c.Stock.GetExchanges()
-symbols, err := c.Stock.GetSymbols("dddadsad")
-gradings, err := c.Stock.GetGradings(&finnhub.GradingParams{Symbol: "hello"})
+symbols, err := c.Stock.GetSymbols("US")
+gradings, err := c.Stock.GetGradings(&finnhub.GradingParams{Symbol: "AAPL"})
 
 // Crypto
 exchanges, err := c.Crypto.GetExchanges()
@@ -44,6 +46,6 @@ candle, err := c.Forex.GetCandle("OANDA:XAU_GBP", finnhub.CandleResolutionMonth,
 // News
 news, err := c.News.Get(nil)
 news, err = c.News.Get(&finnhub.NewsParams{Category: finnhub.NewsCategoryCrypto})
-news, err = c.News.GetCompany("APPL")
-sentiment, err := c.News.GetSentiment("AAPL ")
+news, err = c.News.GetCompany("AAPL")
+sentiment, err := c.News.GetSentiment("AAPL")
 ```
