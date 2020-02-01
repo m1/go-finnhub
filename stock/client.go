@@ -39,7 +39,7 @@ const (
 	URLSymbol = "stock/symbol"
 
 	// URLQuote quote endpoint url
-	URLQuote = "stock/quote"
+	URLQuote = "quote"
 
 	// URLGradings gradings endpoint url
 	URLGradings = "stock/upgrade-downgrade"
